@@ -6,4 +6,13 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Folder Include="Core\DTOs\" />
+    <Folder Include="Core\Entities\" />
+    <Folder Include="Core\Interface\" />
+    <Folder Include="Core\Settings\" />
+    <Folder Include="Core\Services\" />
+    <Folder Include="Infrastructure\" />
+  </ItemGroup>
+
 </Project>
