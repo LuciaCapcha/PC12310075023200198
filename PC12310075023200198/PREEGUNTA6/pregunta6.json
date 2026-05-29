@@ -1,0 +1,128 @@
+{
+  "info": {
+    "_postman_id": "2dd0b8e4-d047-41d6-ab13-95bf40051275",
+    "name": "Servicio",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "54272562",
+    "_collection_link": "https://go.postman.co/collection/54272562-2dd0b8e4-d047-41d6-ab13-95bf40051275?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "GetServicio",
+      "request": {
+        "method": "GET",
+        "header": []
+      },
+      "response": []
+    },
+    {
+      "name": "PostServicio",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"descripcionProblema\": \"Cambio de pastillas de freno y afinamiento general\",\r\n  \"costoEstimado\": 185.50,\r\n  \"estado\": \"Pendiente\",\r\n  \"vehiculoId\": 1,\r\n  \"tipoServicioId\": 1\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://localhost:7161/api/ordenservicio",
+          "protocol": "https",
+          "host": [
+            "localhost"
+          ],
+          "port": "7161",
+          "path": [
+            "api",
+            "ordenservicio"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "DeleteServico",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "https://localhost:7161/api/ordenservicio/1",
+          "protocol": "https",
+          "host": [
+            "localhost"
+          ],
+          "port": "7161",
+          "path": [
+            "api",
+            "ordenservicio",
+            "1"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "PutServico",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"id\": 1,\r\n  \"descripcionProblema\": \"Cambio de pastillas de freno y afinamiento general - (Actualizado desde Postman)\",\r\n  \"costoEstimado\": 185.50,\r\n  \"estado\": \"En Proceso\",\r\n  \"vehiculoId\": 1,\r\n  \"tipoServicioId\": 1\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://localhost:7161/api/ordenservicio/1",
+          "protocol": "https",
+          "host": [
+            "localhost"
+          ],
+          "port": "7161",
+          "path": [
+            "api",
+            "ordenservicio",
+            "1"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "PostOdenServicio",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"descripcionProblema\": \"Alineamiento de las ruedas delanteras por desvío\",\r\n  \"costoEstimado\": 120.00,\r\n  \"estado\": \"Pendiente\",\r\n  \"vehiculoId\": 1,\r\n  \"tipoServicioId\": 2\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://localhost:7161/api/ordenservicio",
+          "protocol": "https",
+          "host": [
+            "localhost"
+          ],
+          "port": "7161",
+          "path": [
+            "api",
+            "ordenservicio"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}

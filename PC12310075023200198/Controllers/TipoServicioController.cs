@@ -40,7 +40,7 @@ namespace PC12310075023200198.Controllers
             if (tipoServicio == null)
             {
                 return NotFound(new { mensaje = $"El tipo de servicio con ID {id} no existe." });
-            }
+            } 
 
             return Ok(tipoServicio);
         }
