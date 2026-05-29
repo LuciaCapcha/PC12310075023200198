@@ -1,3 +1,5 @@
+using PC1.CORE.Infrastructure;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -9,6 +11,9 @@ builder.Services.AddOpenApi();
 builder.Services.AddDbContext<PC1.CORE.Infrastructure.Data.TallerMecanicoDbContext>();
 builder.Services.AddScoped<PC1.CORE.Core.Interface.IOrdenServicioRepository, PC1.CORE.Infrastructure.Repositories.OrdenServicioRepository>();
 builder.Services.AddScoped<PC1.CORE.Core.Interface.IOrdenServicioService, PC1.CORE.Infrastructure.Services.OrdenServicioService>();
+
+// Register DbContext
+builder.Services.AddDbContext<TallerMecanicoDbContext>();
 
 var app = builder.Build();
 
