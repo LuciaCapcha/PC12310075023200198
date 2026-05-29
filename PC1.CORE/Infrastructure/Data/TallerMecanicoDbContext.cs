@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
 using PC1.CORE.Core.Entities;
 
-namespace PC1.CORE.Infrastructure;
+namespace PC1.CORE.Infrastructure.Data;
 
 public partial class TallerMecanicoDbContext : DbContext
 {
