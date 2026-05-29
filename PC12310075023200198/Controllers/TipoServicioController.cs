@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using PC1.CORE.Core.Entities;
-using PC1.CORE.Infrastructure;
+using PC1.CORE.Infrastructure.Data;
 
 namespace PC12310075023200198.Controllers
 {

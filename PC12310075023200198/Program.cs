@@ -1,4 +1,7 @@
-using PC1.CORE.Infrastructure;
+using PC1.CORE.Infrastructure.Data;
+using PC1.CORE.Core.Interface;
+using PC1.CORE.Infrastructure.Repositories;
+using PC1.CORE.Infrastructure.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -8,12 +11,9 @@ builder.Services.AddControllers();
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 builder.Services.AddOpenApi();
 // DbContext and DI for services/repositories
-builder.Services.AddDbContext<PC1.CORE.Infrastructure.Data.TallerMecanicoDbContext>();
-builder.Services.AddScoped<PC1.CORE.Core.Interface.IOrdenServicioRepository, PC1.CORE.Infrastructure.Repositories.OrdenServicioRepository>();
-builder.Services.AddScoped<PC1.CORE.Core.Interface.IOrdenServicioService, PC1.CORE.Infrastructure.Services.OrdenServicioService>();
-
-// Register DbContext
 builder.Services.AddDbContext<TallerMecanicoDbContext>();
+builder.Services.AddScoped<IOrdenServicioRepository, OrdenServicioRepository>();
+builder.Services.AddScoped<IOrdenServicioService, OrdenServicioService>();
 
 var app = builder.Build();
 
